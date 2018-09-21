@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 URLDownloadToFile, https://drive.google.com/uc?export=download&id=10NrJ4egeUoON6zaD1BRojBwUPOLYJ1zY, Smart Water Icon.ico
@@ -18,17 +18,10 @@ Menu, Tray, Icon, Smart Water Icon.ico  ; Changes default icon for script
 setN = 1
 
 ;  SCRIPT  =============================================================================
-
-
-;URLDownloadToFile, https://image.ibb.co/bGoZnK/Smart_Water_Icon.png, Smart Water Icon.png
-;URLDownloadToFile, https://image.ibb.co/hkCS7K/Smart_Water_Logo.png, Smart Water Logo.png
-;URLDownloadToFile, https://image.ibb.co/ehdZnK/Smart_Water_Logo.jpg, Smart Water Logo.jpg
-
 URLDownloadToFile, https://image.ibb.co/kVkfSK/Smart_Water_Logo_small.png, Smart Water Logo small.png
 URLDownloadToFile, https://image.ibb.co/cWKwHK/ntimage.gif, ntimage.gif
 URLDownloadToFile, https://image.ibb.co/jkX2Pz/Install_button_hover.png, Install button hover.png
 URLDownloadToFile, https://image.ibb.co/kHMJxK/Install_button.png, Install button.png
-
 
 global PBS_SMOOTH            := 0x00000001
 global PBM_SETSTATE          := WM_USER + 16
@@ -132,6 +125,7 @@ GuiControl,, Installing, 30
 URLDownloadToFile, https://pastebin.com/raw/mELGuQXc, Help.txt
 URLDownloadToFile, https://pastebin.com/raw/wjhmHvrT, About.txt
 URLDownloadToFile, https://pastebin.com/raw/jujndWy6, Config.txt
+URLDownloadToFile, https://pastebin.com/raw/MPQWrEWP, LinkDownloads.txt
 URLDownloadToFile, https://pastebin.com/raw/59xgt3yg, tf.ahk
 URLDownloadToFile, https://pastebin.com/raw/vYbERGwD, SetBtnTxtColor.ahk
 URLDownloadToFile, https://pastebin.com/raw/fKt6VZab, PleasantNotify.ahk
@@ -140,13 +134,17 @@ Sleep, 100
 GuiControl,, MyText, Downloading App (This may take a while)...
 GuiControl,, Installing, 40
 ;  ============================================
-URLDownloadToFile, https://drive.google.com/uc?export=download&id=1t_ypQXk6_FqQyF8vyClvzJlOtcAaxlaU, 12Hour Refresh TM.exe
+FileReadLine, TempURLPath, LinkDownloads.txt, 1
+URLDownloadToFile, %TempURLPath%, 12Hour Refresh TM.exe
 GuiControl,, Installing, 42.5
-URLDownloadToFile, https://drive.google.com/uc?export=download&id=1uy0dgBeWSp5ctAB3kjhoLCpgwvfBDAoA, Smart Water.exe
+FileReadLine, TempURLPath, LinkDownloads.txt, 2
+URLDownloadToFile, %TempURLPath%, Smart Water.exe
 GuiControl,, Installing, 45
-URLDownloadToFile, https://drive.google.com/uc?export=download&id=1NqiieuLlxGT1_8qsKZ4GgDPEq_IOzyFU, Smart Water Internal.exe
+FileReadLine, TempURLPath, LinkDownloads.txt, 3
+URLDownloadToFile, %TempURLPath%, Smart Water Internal.exe
 GuiControl,, Installing, 47.5
-URLDownloadToFile, https://drive.google.com/uc?export=download&id=1BqNRQ0Sh-z3206_-zzZhbFT3FDJTrwmw, Smart Water Facts.exe
+FileReadLine, TempURLPath, LinkDownloads.txt, 4
+URLDownloadToFile, %TempURLPath%, Smart Water Facts.exe
 Sleep, 100
 
 GuiControl,, MyText, Configuring Files...
