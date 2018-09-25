@@ -9,4 +9,5 @@ The main features of the app are:
 - Recommendations on daily hydration based on age and fitness rating
 
 # Install Smart Water
-To download the installer for the latest version (v1.00) of Smart Water (Smart Water Installer.exe), [click here](https://github.com/Blake-Tourneur/Smart-Water/raw/master/Smart%20Water%20Installer.exe)
+[BETA] To download the installer for the latest version (v1.00) of Smart Water (Smart Water Installer.exe), [click here](https://github.com/Blake-Tourneur/Smart-Water/raw/master/Smart%20Water%20Installer.exe)
+### WARNING: This version is not very stable and may have some glitches. Version 1.01, the first stable version, is coming out very soon!
