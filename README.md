@@ -9,5 +9,5 @@ The main features of the app are:
 - Recommendations on daily hydration based on age and fitness rating
 
 # Install Smart Water
-[BETA] To go to the releases page of Smart Water, [click here](https://github.com/Blake-Tourneur/Smart-Water/releases)
+To go to the releases page of Smart Water, [click here](https://github.com/Blake-Tourneur/Smart-Water/releases)
 #### INFORMATION: Your web browser and PC may flag this app as a virus, only because it is an executable file. It is 100% safe, so you can bypass all warning without worrying.
